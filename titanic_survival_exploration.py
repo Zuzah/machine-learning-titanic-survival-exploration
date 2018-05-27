@@ -97,7 +97,8 @@ X_train, X_test, y_train, y_test = train_test_split(features, outcomes, test_siz
 from sklearn.tree import DecisionTreeClassifier
 
 # TODO: Define the classifier, and fit it to the data
-model = None
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
 
 
 # ## Testing the model
