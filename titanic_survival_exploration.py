@@ -136,8 +136,17 @@ print('The test accuracy is', test_accuracy)
 
 
 # TODO: Train the model
+model = DecisionTreeClassifier(max_depth=6, min_samples_leaf=6, min_samples_split=10)
+model.fit(X_train, y_train)
 
 # TODO: Make predictions
+y_train_pred = model.predict(X_train)
+y_test_pred = model.predict(X_test)
 
 # TODO: Calculate the accuracy
+train_accuracy = accuracy_score(y_train, y_train_pred)
+test_accuracy = accuracy_score(y_test, y_test_pred)
+
+print('The training accuracy is', train_accuracy)
+print('The test accuracy is', test_accuracy)
 
